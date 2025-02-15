@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="icon" href="images/favicon-16x16.png" type="image/png" />
+    <title>URGENT.SK</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-logo">
+          <img src="./images/android-chrome-192x192.png" alt="hviezda života" />
+          <p>URGENT.SK</p>
+        </div>
+        <div class="menu-list">
+          <ul>
+            <li>
+              <a target="_self" href="#our_mission">Naše Aktivity</a>
+            </li>
+            <li>
+              <a target="_self" href="#galery">Galéria</a>
+            </li>
+            <li>
+              <a target="_self" href="#who_we_are">Kto sme</a>
+            </li>
+            <li>
+              <a target="_self" href="#contact">Kontakt</a>
+            </li>
+            <button class="translate-btn" onclick="changeLanguage('en')">EN</button>
+            <button class="translate-btn" onclick="changeLanguage('de')">DE</button>
+            <div id="google_translate_element" style="display: none;"></div>
+          </ul>
+
+        </div>
+        
+        <div class="hamburger-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero section -->
+    <div class="hero-section">
+      <h1>
+        Nadštandardná starostlivosť<br />
+        o vaše zdravie <br />
+      </h1>
+    
+    </div>
+        <!-- Hero section -->
+    <article class="main-content">
+      <div class="h2-heading">
+        <img src="./images/android-chrome-192x192.png" alt="hviezda života" />
+        <h2 id="our_mission">Naše aktivity</h2>
+      </div>
+      <section>
+        <h3>&check; Transporty v rámci celého sveta</h3>
+        <p>
+          Repatriačné transporty pacientov vykonávame pozemnou cestou sanitnými
+          vozidlami, lodnou dopravou (trajektami) a letecky v rámci celého
+          sveta. Členovia eskorty sú starostlivo vyberaný podľa zdravotného
+          stavu pacienta. Výber posádky sa prispôsobuje individuálnym potrebám
+          klienta a charakteru transportu. Zabezpečujeme manažment a asistenciu
+          celého transportu pacienta z východzieho zdravotníckeho zariadenia do
+          cieľového zdravotníckeho zariadenia, prípadne do domáceho ošetrenia.
+          Sme pripravení plniť akékoľvek požiadavky potrebné na transport
+          pacienta.
+        </p>
+        <button>Viac</button>
+      </section>
+      <section>
+        <h3>&check; Agentúra domácej ošetrovateľskej starostlivosti</h3>
+        <p>
+          Poskytujeme zdravotnú starostlivosť klientovi v domácom prostredí 24
+          hodín denne. Služby klientovi zabezpečujeme v celom rozsahu jeho
+          individuálnych potrieb. Starostlivosť zahŕňa všetky procesy od pomoci
+          s osobnou hygienou, stravovaním, dodržiavaním liečebného a pitného
+          režimu, u imobilných pacientov celková ošetrovateľská starostlivosť s
+          dôrazom na prevenciu proti preležaninám, preväzy rán, podávanie liekov
+          i.m., i.v., s.c. V prípade potreby zabezpečíme aj transport a sprievod
+          na lekárske vyšetrenia. Domácu ošetrovateľskú starostlivosť
+          poskytujeme nielen osobám s chronickým ochoreniami, ale aj klientom po
+          operáciách a úrazoch, ktorí potrebujú túto starostlivosť počas doby
+          rekonvalescencie.
+        </p>
+        <button>Viac</button>
+      </section>
+      <section>
+        <h3>&check; Návštevná lekárska služba prvej pomoci</h3>
+        <p>
+          Pre našich klientov poskytujeme návštevnú službu lekára, prípadne
+          iného zdravotníckeho pracovníka, tzv. housecall, 24 hodín denne, 7 dní
+          v týždni. Sme schopní navštíviť klienta na území celej Slovenskej
+          republiky. Vykonávame základné vyšetrenie a ošetrenie, ak to zdravotný
+          stav umožňuje na domácej adrese, a tým sa klient vyhne nutnosti
+          návštevy zdravotníckeho zariadenia, a môže ostať v pohodlí svojho
+          domova.
+        </p>
+        <button>Viac</button>
+      </section>
+      <section>
+        <h3>&check; Ambulancia všeobecného lekára</h3>
+        <p>
+          Všeobecný lekár ako lekár prvého kontaktu poskytuje komplexnú
+          starostlivosť o pacienta počas jeho života. V našej ambulancii
+          vychádzame v ústrety našim pacientom, zameriavame sa na ich
+          individuálne potreby a preferujeme osobný a ľudský prístup ku každému
+          klientovi. Naši klienti majú lekára na telefóne 24 hodín denne, 7 dní
+          v týždni, môžu si určiť termín vyšetrenie podľa individuálnych
+          potrieb, vrátane večerných hodín alebo cez víkend.
+        </p>
+        <button>Viac</button>
+      </section>
+      <section>
+        <h3>&check; Ambulancia anestéziológie a intenzívnej medicíny</h3>
+        <p>
+          Všeobecný lekár ako lekár prvého kontaktu poskytuje komplexnú
+          starostlivosť o pacienta počas jeho života. V našej ambulancii
+          vychádzame v ústrety našim pacientom, zameriavame sa na ich
+          individuálne potreby a preferujeme osobný a ľudský prístup ku každému
+          klientovi. Naši klienti majú lekára na telefóne 24 hodín denne, 7 dní
+          v týždni, môžu si určiť termín vyšetrenie podľa individuálnych
+          potrieb, vrátane večerných hodín alebo cez víkend.
+        </p>
+        <button>Viac</button>
+      </section>
+      <section>
+        <h3>
+          &check; Zabezpečenie zdravotnej služby športových a spoločenských
+          podujatí
+        </h3>
+        <p>
+          Pri usporadúvaní podujatí, ktoré si vyžadujú medicínske zabezpečenie
+          Vám radi poskytneme náš skúsený tím pozemnej ambulancie či už formou
+          RZP - posádky so záchranárom alebo RLP - posádky s lekárom. Radi Vám
+          poradíme pri výbere typu a počtu zdravotníckeho personálu podľa
+          charakteru Vami organizovaného spoločenského podujatia.
+        </p>
+        <button>Viac</button>
+      </section>
+      <section>
+        <h3>&check; Konzultačné služby a asistencia</h3>
+        <p>
+          Zameriavame sa na neštandardné situácie, keďže máme bohaté skúsenosti
+          s repatriačnými transportami a lokálnymi podmienkami v rôznych
+          krajinách, sme schopní zabezpečiť transport tzv. bed to bed, teda z
+          jedného zdravotníckeho zariadenia do druhého. Zabezpečíme komunikáciu
+          so zdravotníckym zariadením a ošetrujúcim lekárom, leteckou
+          spoločnosťou, kde zariadime povolenie na let od leteckej spoločnosti
+          pre konkrétneho pacienta a jeho diagnózu, zabezpečujeme letenky
+          aprijatie pacienta do cieľového zdravotníckeho zariadenia. Menežujeme
+          logistiku v rámci celého transportu pacienta, či sa jedná o transport
+          letecký alebo transport pozemný. Pri leteckých transportoch
+          zabezpečujeme starostlivosť o pacienta v priebehu celého transportu,
+          asistenciu na letiskách, použitie transportnej techniky (nosítka,
+          invalidný vozík), dopravenie pacienta na palubu lietadla v akomkoľvek
+          prípade, či sa už jedná o špeciál alebo pravidelnú linku.
+        </p>
+        <button>Viac</button>
+      </section></div>
+      </article>
+      <article class="main-content">
+        <div class="h2-heading">
+          <img src="./images/android-chrome-192x192.png" alt="hviezda života" />
+          <h2 id="galery">Galéria</h2>
+        </div>
+      </article>
+      <div class="container">
+        <div class="picture-1"><img src="/images/image1.jpeg" alt=""></div>
+        <div class="picture-2"><img src="/images/image2.jpeg" alt=""></div>
+        <div class="picture-3"><img src="/images/image3.JPG" alt=""></div>
+        <div class="picture-4"><img src="/images/image4.webp" alt=""></div>
+        <div class="picture-5"><img src="/images/image5.jpg" alt=""></div>
+        <div class="picture-6"><img src="/images/image6.png" alt=""></div>
+        <div class="picture-7"><img src="/images/image7.jpg" alt=""></div>
+        <div class="picture-8"><img src="/images/image8.jpg" alt=""></div>
+        <div class="picture-9"><img src="/images/image8.jpg" alt=""></div>
+      </div>
+    <article class="main-content">
+      <div class="h2-heading">
+        <img src="./images/android-chrome-192x192.png" alt="hviezda života" />
+        <h2 id="who_we_are">Kto sme</h2>
+      </div>
+      <section>
+        <h3>&check; URGENT.SK s.r.o.</h3>
+        <p>
+          Smee neštátne zdravotnícke zariadenie poskytujúce nadštandardné služby v oblasti zdravotnej starostlivosti, s dôrazom kladeným na vysokú odbornosť a profesionalitu poskytovaných služieb.
+
+          Prioritou spoločnosti URGENT.SK je empatický prístup ku klientom s možnosťami individuálnych riešení ich požiadaviek a potrieb. Cieľom spoločnosti je uspokojiť tých najnáročnejších klientov. Zameriavame sa na kvalitu nad kvantitou, a snažíme sa naším klientom zabezpečiť kontakt so zdravotnou starostlivosťou jednoduchší a príjemnejší.
+          Naša spoločnosť nepozná hranice, pôsobíme v rámci celeho sveta. Sme všade tam kde nás potrebujú. Hlavný podiel našej činnosti tvoria medzinárodné transporty pacientov. Sme pripravení plniť akékoľvek úlohy týkajúce sa poskytovania zdravotnej starostlivosti, transportu pacientov, logistiky a manažmentu záchranných misií kedykoľvek, kdekoľvek a v akomkoľvek prostredí vo svete.
+        
+        
+        </p>
+        <button>Viac</button>
+      </section>
+      <section>
+        <h3>&check; Odborní garanti</h3>
+        <p>
+          › Lekár v odbore Anestéziológia a intenzívna medicína – MUDr. Lucia Prétiová
+          › Lekár v odbore Všeobecné lekárstvo – MUDr. Lucia Prétiová
+          › Záchranár v odbore Urgentná zdravotná starostlivosť – Mgr. Michal Urda, MHA
+        </p>
+        <button>Viac</button>
+      </section>
+      <section>
+        <h3>&check; Partneri</h3>
+        <p>
+          Našimi obchodnými partnermi sú komerčné poisťovne, asistenčné spoločnosti, zdravotnícke zariadenia a súkromné osoby vyžadujúce nadštandardnú starostlivosť, zahraniční občania žijúci na území Slovenskej republiky vyžadujúcich si individuálny prístup v zdravotnej starostlivosti.
+        </p>
+        <button>Viac</button>
+      </section>
+      <section>
+        <h3>&check; História</h3>
+        <p>
+          História spoločnosti URGENT.SK siaha do roku 2005, kedy dňa 10.2. spoločnosť vznikla. V tom istom roku sa dňa 15.8. obchodný podiel spoločnosti prerozdelil medzi spoločníkov Janette Kitkovú, Mgr. Michala Urdu MHA a Romana Grusa. Od 15.8.2006 sú majiteľmi spoločnosti Mgr. Michal Urda MHA a Roman Grus.
+        </p>
+        <button>Viac</button>
+      </section>
+      <section>
+        <h3>&check; Náš pracovný tím</h3>
+        <p>
+          Tvoria lekári, zdravotnícky záchranári, zdravotné sestry, vodiči a pracovníci dispečingu.
+          › Lekári s atestačnými skúškami v odboroch anestéziológia a intenzívna medicína a všeobecné lekárstvo.
+          › Záchranári s vyšším odborným vzdelaním alebo vysokoškolským vzdelaním I. a II. stupňa v odbore urgentná zdravotná starostlivosť.
+          › Zdravotné sestry s vyšším odborným vzdelaním ako diplomované zdravotné sestry a zdravotné sestry s ukončeným I. a II. stupňom vysokoškolského vzdelania.
+          › Vodiči s dlhoročnými skúsenosťami vo vedení motorových vozidiel, špecializačnou prípravou zameranou na bezpečnosť a plynulosť vedenia motorového vozidla, držitelia oprávnenia na vedenie vozidla s právom prednostnej jazdy.
+        </p>
+        <button>Viac</button>
+      </section>
+      <section>
+        <h3>&check; Flotila</h3>
+        <p>
+          Počas svojej existencie prešla spoločnosť vývojom v rámci výberu automobilov. Po skúsenostiach a mnohých prejdených kilometroch sme dospeli k záveru, že najkvalitnejšie služby sa dajú poskytovať len s najlepším technickým vybavením. A preto náš vozový park pozostáva výhradne z vozidiel prémiovej značky Mercedes - Benz. Dôležitou skutočnosťou v službách spoločnosti Mercedes - Benz je 24 hodín dostupný servis v rámci celého sveta s garanciou mobility 24 hodín denne.
+        </p>
+        <button>Viac</button>
+      </section>
+    </article>
+    <footer>
+      <div class="address">
+        <h2 id="contact">
+         ADRESA<br />
+          +421 911 911 511 - NON STOP<br />
+          Myslenická 1/E, 902 03 Pezinok <br />
+          info@urgent.sk
+        </h2>
+        <div id="map"></div>
+      </div>
+
+      <p>&copy; 2024 URGENT.SK We care. All rights reserved.</p>
+     <!-- API map -->
+      <script src="map.js"></script>
+    </footer>
+    <script src="script.js"></script>
+
+      <!-- API google transalte -->
+    <script
+      src="https://kit.fontawesome.com/686e8f1574.js"
+      crossorigin="anonymous"
+    ></script>
+
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+</html>
