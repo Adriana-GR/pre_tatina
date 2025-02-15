@@ -47,15 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 class ToggleContent {
-  constructor(button, paragraph) {
-    this.button = button;
-    this.paragraph = paragraph;
+  constructor(section) {
+    this.section = section;
+    this.button = section.querySelector("button");
+    this.paragraph = section.querySelector("p");
     this.init();
   }
 
   // Initialize by adding the click event listener
   init() {
-    this.button.addEventListener("click", () => this.toggleParagraph());
+    this.section.addEventListener("click", () => this.toggleParagraph());
   }
 
   // Toggle the display of the paragraph
@@ -70,9 +71,7 @@ class ToggleContent {
 
 // Initialize ToggleContent for each section
 document.querySelectorAll("section").forEach((section) => {
-  const button = section.querySelector("button");
-  const paragraph = section.querySelector("p");
-  new ToggleContent(button, paragraph); // Create a new instance for each section
+  new ToggleContent(section); // Create a new instance for each section
 });
 
 class MapHandler {
